@@ -620,15 +620,7 @@
             .bios-header h1 {
                 font-size: 2rem;
             }
-            
-            .click-hint {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-top: 4px;
-            }
         }
-        
     </style>
 </head>
 <body>
@@ -1944,20 +1936,17 @@
         align-items:center;
         justify-content:center;">
         <div style="text-align:center;">
-            <img id="modal-image" src="" alt="" style="max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 0 20px rgba(0,0,0,0.5)" title="Haz clic en cualquier parte para cerrar">
+            <img id="modal-image" src="" alt="" style="max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 0 20px rgba(0,0,0,0.5)" title="Hacer clic en cualquier parte para cerrar">
         </div>
-    </div>    
+    </div>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const modal = document.getElementById("image-modal");
         const modalImg = document.getElementById("modal-image");
 
-        // Añadir leyenda debajo de cada imagen de carpeta img
+        // Añadir tooltip a cada imagen de carpeta img
         document.querySelectorAll('img[src*="/img/"]').forEach(img => {
-            const hint = document.createElement('div');
-            hint.className = 'click-hint';
-            hint.textContent = 'Hacer clic para agrandar la imagen';
-            img.insertAdjacentElement('afterend', hint);
+            img.title = 'Haga click para agrandar';
         });
 
         // Delegar evento para cualquier imagen que provenga de carpeta img
