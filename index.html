@@ -1925,20 +1925,22 @@
 
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', init);
-    </script> 
-        <div id="image-modal" style="
-            display:none;
-            position:fixed;
-            z-index:2000;
-            left:0;top:0;
-            width:100%;height:100%;
-            background:rgba(0,0,0,0.8);
-            align-items:center;
-            justify-content:center;">
-            <div style="text-align:center;">
-                <img id="modal-image" src="" alt="" style="max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 0 20px rgba(0,0,0,0.5)" title="Hacer clic en cualquier parte para cerrar">
-            </div>
+    </script>
+    <!-- Contenedor del visor -->
+    <div id="image-modal" style="
+        display:none;
+        position:fixed;
+        z-index:2000;
+        left:0;top:0;
+        width:100%;height:100%;
+        background:rgba(0,0,0,0.8);
+        align-items:center;
+        justify-content:center;">
+        <div style="text-align:center;">
+            <img id="modal-image" src="" alt="" style="max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 0 20px rgba(0,0,0,0.5)">
+            <div class="click-hint" style="color:white;">Haz clic en cualquier parte para cerrar</div>
         </div>
+    </div>    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
         const modal = document.getElementById("image-modal");
